@@ -4,21 +4,22 @@
 </template>
 
 <script>
+import { onMounted } from '@vue/runtime-core'
+import { ref } from "vue"
 export default {
     props:['score'],
-    data() {
-        return {
-            rank: null
-        }
-    },
-    mounted(){
-        if (this.score<250){
-            this.rank = 'Ninja Fingers'
-        } else if (this.score < 400) {
-            this.rank = "Rapid Reflexes"
-        }else {
-            this.rank ='Snail pace...'
-        }
+    setup({score}){
+        const rank = ref(null)
+        onMounted(()=>{
+            if (score < 250){
+                rank.value = 'Ninja Fingers'
+            } else if (score < 400) {
+                rank.value = "Rapid Reflexes"
+            }else {
+                rank.value ='Snail pace...'
+            }
+        })
+        return {rank}
     }
 }
 </script>

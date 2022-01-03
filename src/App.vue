@@ -8,32 +8,32 @@
 <script>
 import Block from "./components/Block.vue"
 import Results from "./components/Results.vue"
+import {reactive, toRefs} from "vue"
 export default {
+  setup(){
+    const game = reactive({
+      isPlaying: false,
+      delay: null,
+      score: null,
+      showResults: false
+    })
+ 
+    function start(){
+      game.delay = 500 + Math.random() * 5000
+      game.isPlaying = true
+      game.showResults = false
+    }
+    function endGame(reactionTime){
+      game.score = reactionTime
+      game.isPlaying = false
+      game.showResults = true
+    }
+    return {...toRefs(game),start,endGame}
+  },
   name: 'App',
   components: {
     Block, Results
   },
-  data(){
-    return {
-      isPlaying: false,
-      delay: null,
-      score: null,
-      showResults: false,
-    }
-  },
-  methods: { 
-    start() {
-      this.delay = 500 + Math.random() * 5000
-      this.isPlaying = true
-       this.showResults = false
-    },
-    endGame(reactionTime){
-      this.score = reactionTime
-      this.isPlaying = false
-      this.showResults = true
-    }
-
-  }
 }
 </script>
 

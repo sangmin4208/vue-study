@@ -5,32 +5,32 @@
 </template>
 
 <script>
+import {onMounted, ref} from 'vue';
 export default {
     props:['delay'],
-    data(){
-        return {
-            showBlock: false,
-            timer: null,
-            reactionTime:0
-        }
-    },
-    mounted(){
-        setTimeout(()=>{
-            this.showBlock = true
-            this.startTimer()
-        },this.delay)
-    },
-    methods : {
-        startTimer(){
-            this.timer = setInterval(()=>{
-                this.reactionTime += 10 
+    setup(props,context){
+        const showBlock = ref(false)
+        const timer = ref(null)
+        const reactionTime = ref(null)
+        onMounted(()=>{
+            setTimeout(()=>{
+                showBlock.value = true
+                startTimer()
+            },props.delay)
+        })
+        function startTimer(){
+            timer.value = setInterval(()=>{
+                reactionTime.value += 10 
             }, 10)
-        },
-        stopTimer(){
-            clearInterval(this.timer)
-            this.$emit('end', this.reactionTime)
         }
+        function stopTimer(){
+            clearInterval(timer.value)
+            context.emit('end', reactionTime)
+        }
+        return {showBlock, timer, reactionTime, startTimer,stopTimer}
     },
+
+
 }
 </script>
 
