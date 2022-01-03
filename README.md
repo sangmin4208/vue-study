@@ -4,3 +4,6 @@
 ```
 git checkout reaction-timer
 ```
+```
+git checkout reaction-composition
+```
