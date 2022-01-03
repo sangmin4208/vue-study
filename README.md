@@ -1,9 +1,8 @@
-# vue-study
+# Perspective playground
+```
+yarn install or npm install 
+```
 
-## Reaction Timer 
 ```
-git checkout reaction-timer
-```
-```
-git checkout reaction-composition
+yarn serve or npm run serve
 ```
