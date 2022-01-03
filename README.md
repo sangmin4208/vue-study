@@ -5,7 +5,7 @@
 git checkout reaction-timer
 ```
 ```
-git checkout reaction-composition
+git checkout reaction-timer-composition
 ```
 ## Perspective Playground
 ```
