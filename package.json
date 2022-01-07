@@ -1,0 +1,11 @@
+{
+  "name": "vue-study",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sangmin4208/vue-study.git",
+  "author": "Lee Sang-Min <sangmin4208@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "branch": "sh new.sh"
+  }
+}
