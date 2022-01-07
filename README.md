@@ -1,13 +1,29 @@
-# vue-study
+# web-form
 
-## Reaction Timer 
+## Project setup
+
 ```
-git checkout reaction-timer
+yarn install
 ```
+
+### Compiles and hot-reloads for development
+
 ```
-git checkout reaction-timer-composition
+yarn serve
 ```
-## Perspective Playground
+
+### Compiles and minifies for production
+
 ```
-git checkout perspective-playground
+yarn build
 ```
+
+### Lints and fixes files
+
+```
+yarn lint
+```
+
+### Customize configuration
+
+See [Configuration Reference](https://cli.vuejs.org/config/).
