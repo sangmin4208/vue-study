@@ -27,3 +27,9 @@ git checkout web-form
 ```
 git checkout jobs-router
 ```
+
+## Planner
+
+```
+git checkout planner
+```
