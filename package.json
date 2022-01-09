@@ -6,6 +6,6 @@
   "author": "Lee Sang-Min <sangmin4208@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "branch": "sh new.sh"
+    "new": "sh new.sh"
   }
 }
