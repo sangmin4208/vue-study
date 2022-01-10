@@ -18,6 +18,12 @@ git checkout reaction-timer-composition
 git checkout perspective-playground
 ```
 
+## Monster Slayer
+
+```
+git checkout monster-slayer
+```
+
 ## Web Form
 
 ```
